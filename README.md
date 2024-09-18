@@ -14,15 +14,15 @@
 
 ### Features
 
-- [] User Auth functionality (Signup, Login, Forgot Password, Reset Password)
-- [] JWT Authentication
+- [ ] User Auth functionality (Signup, Login, Forgot Password, Reset Password)
+- [ ] JWT Authentication
 - [x] REST API
 - [x] Gorm (Golang SQL DB ORM) with Postgres implementation and auto migration
 - [x] Configs via environmental variables
-- [] Email notification (Welcome email, Reset password email)
+- [ ] Email notification (Welcome email, Reset password email)
 - [x] Swagger REST API documentation
-- [] Unit tests
-- [] Dependency injection
+- [ ] Unit tests
+- [ ] Dependency injection
 - [x] I18n 
 - [x] Sms service
 
