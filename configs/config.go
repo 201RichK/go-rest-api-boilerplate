@@ -1,4 +1,4 @@
-package setting
+package configs
 
 import (
 	"fmt"
@@ -33,6 +33,21 @@ type Server struct {
 
 var ServerSetting = &Server{}
 
+type Logger struct {
+	Filename string
+	Output   string
+}
+
+var LoggerSetting = &Logger{}
+
+type Jetfy struct {
+	SenderId string
+	Tooken   string
+	BaseUrl  string
+}
+
+var JetfySetting = &Jetfy{}
+
 type Database struct {
 	Type     string
 	User     string
@@ -64,6 +79,8 @@ func Setup() {
 	mapEnvToStruct("server", ServerSetting, envs)
 	mapEnvToStruct("database", DatabaseSetting, envs)
 	mapEnvToStruct("redis", RedisCacheSetting, envs)
+	mapEnvToStruct("logger", LoggerSetting, envs)
+	mapEnvToStruct("jetfy", JetfySetting, envs)
 
 	ServerSetting.ReadTimeout = ServerSetting.ReadTimeout * time.Second
 	ServerSetting.WriteTimeout = ServerSetting.WriteTimeout * time.Second

@@ -1,0 +1,4 @@
+hello-world: "Hey 👋 {{.name}}"
+
+# API
+internal_server_error: "😬 Oups... Something went wrong. Please try again later"

@@ -1,0 +1,4 @@
+hello-world: "Salut 👋 {{.name}}"
+
+# API 
+internal_server_error: "😬 Une erreur est survenue. Veuillez réessayer plus tard."

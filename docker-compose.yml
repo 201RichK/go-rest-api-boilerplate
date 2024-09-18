@@ -40,9 +40,6 @@ services:
       - aro-db
       - aro-cache
     command: air # or "reflex -r '.*\\.go$' -s -- sh -c 'go run main.go'"
-    environment:
-      - DATABASE_URL=postgres://user:password@aro-db:5432/${database_name}?sslmode=disable
-      - REDIS_URL=redis://:${redis_password}@aro-cache:6379/0
     restart: always
 
 volumes:
