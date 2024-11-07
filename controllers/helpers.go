@@ -3,9 +3,9 @@ package controllers
 import (
 	"net/http"
 
-	"github.com/aro/infra/logger"
 	ginI18n "github.com/gin-contrib/i18n"
 	"github.com/gin-gonic/gin"
+	"github.com/rest-api/infra/logger"
 )
 
 // Response object as HTTP response

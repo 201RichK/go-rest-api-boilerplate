@@ -1,4 +1,4 @@
-module github.com/aro
+module github.com/rest-api
 
 go 1.22.3
 

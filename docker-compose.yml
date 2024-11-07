@@ -1,12 +1,12 @@
 version: '3.7'
 
 services:
-  aro-db:
+  db:
     image: postgres:11.2
-    container_name: aro-db
+    container_name: db
     volumes:
       - ./init.sql:/docker-entrypoint-initdb.d/init.sql
-      - aro-db:/var/lib/postgresql/data
+      - db:/var/lib/postgresql/data
     ports:
       - 6003:5432
     environment:
@@ -14,34 +14,34 @@ services:
       - POSTGRES_PASSWORD=${database_password}
     restart: always
 
-  aro-cache:
+  cache:
     image: 'bitnami/redis:latest'
-    container_name: aro-cache
+    container_name: cache
     restart: always
     ports:
       - '6380:6379'
     volumes:
-      - aro-cache:/bitnami/redis/data
+      - cache:/bitnami/redis/data
     environment:
       - ALLOW_EMPTY_PASSWORD=no
       - REDIS_PASSWORD=${redis_password}
       - REDIS_DISABLE_COMMANDS=FLUSHDB,FLUSHALL
 
-  aro-api:
+  api:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: aro-api
+    container_name: api
     volumes:
       - .:/app # Mount the source code
     ports:
       - '8080:8080'
     depends_on:
-      - aro-db
-      - aro-cache
+      - db
+      - cache
     command: air # or "reflex -r '.*\\.go$' -s -- sh -c 'go run main.go'"
     restart: always
 
 volumes:
-  aro-db:
-  aro-cache:
+  db:
+  cache:

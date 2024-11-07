@@ -1,8 +1,8 @@
 package domain
 
 import (
-	"github.com/aro/configs"
-	"github.com/aro/infra/logger"
+	"github.com/rest-api/configs"
+	"github.com/rest-api/infra/logger"
 )
 
 // Auto-migrate database models

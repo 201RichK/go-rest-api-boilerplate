@@ -6,14 +6,14 @@ import (
 
 	"github.com/gin-gonic/gin"
 
-	config "github.com/aro/configs"
-	"github.com/aro/domain"
-	"github.com/aro/infra/logger"
+	config "github.com/rest-api/configs"
+	"github.com/rest-api/domain"
+	"github.com/rest-api/infra/logger"
 )
 
-// @title ARO API
+// @title Rest-API API
 // @version 1.0
-// @description This is Go ARO API
+// @description This is Go Rest API
 // @termsOfService http://swagger.io/terms/
 
 // @contact.name API Support
@@ -21,7 +21,7 @@ import (
 // @contact.email contact@amospascal.me
 
 // @license.name MIT
-// @license.url https://github.com/Vague-Digitale/aro-go-backend/blob/main/LICENSE
+// @license.url https://github.com/201RichK/go-rest-api-boilerplate/LICENSE
 
 // @host localhost:8080
 // @BasePath /api/

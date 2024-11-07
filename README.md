@@ -1,4 +1,4 @@
-# ARO Go (Golang) REST 
+# Go-Rest-API (Golang) REST 
 
 - Endpoint (REST API Swagger): http://localhost:8080/swagger/index.html
 

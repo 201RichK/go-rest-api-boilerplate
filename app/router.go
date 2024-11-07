@@ -1,9 +1,9 @@
 package app
 
 import (
-	"github.com/aro/controllers"
 	"github.com/gin-contrib/cors"
 	ginI18n "github.com/gin-contrib/i18n"
+	"github.com/rest-api/controllers"
 	"golang.org/x/text/language"
 	"gopkg.in/yaml.v3"
 
@@ -11,7 +11,7 @@ import (
 	swaggerFiles "github.com/swaggo/files"
 	ginSwagger "github.com/swaggo/gin-swagger"
 
-	_ "github.com/aro/docs"
+	_ "github.com/rest-api/docs"
 )
 
 func InitRouter() *gin.Engine {

@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/aro/app"
+	"github.com/rest-api/app"
 )
 
 func main() {

@@ -4,8 +4,8 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/aro/configs"
 	"github.com/fatih/color"
+	"github.com/rest-api/configs"
 	"github.com/sirupsen/logrus"
 )
 

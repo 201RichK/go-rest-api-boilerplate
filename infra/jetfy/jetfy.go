@@ -6,9 +6,9 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/aro/configs"
-	"github.com/aro/infra/logger"
 	"github.com/go-resty/resty/v2"
+	"github.com/rest-api/configs"
+	"github.com/rest-api/infra/logger"
 )
 
 type JetfyPayload struct {

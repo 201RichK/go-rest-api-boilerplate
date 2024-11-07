@@ -8,7 +8,7 @@ import (
 type User struct {
 	gorm.Model
 	ID        uint   `json:"id" gorm:"primaryKey"`
-	AroId     string `json:"aro_id" gorm:"NOT NULL; UNIQUE_INDEX"`
+	XId       string `json:"x_id" gorm:"NOT NULL; UNIQUE_INDEX"`
 	FirstName string `json:"firstname" gorm:"size:255"`
 	LastName  string `json:"lastname" gorm:"size:255"`
 	Email     string `json:"email" gorm:"NOT NULL; UNIQUE_INDEX"`
@@ -20,6 +20,6 @@ type User struct {
 }
 
 func (u *User) BeforeCreate(tx *gorm.DB) (err error) {
-	u.AroId = xid.New().String()
+	u.XId = xid.New().String()
 	return
 }
